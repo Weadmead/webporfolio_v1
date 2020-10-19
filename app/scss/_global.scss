@@ -1,0 +1,55 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: auto;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-size: inherit;
+}
+body {
+  min-width: 320px;
+  overflow-x: hidden;
+  position: relative;
+  color: #fff;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 28px;
+  background-color: #000 linear-gradient(230deg, #283048, #859398);
+}
+.container {
+  max-width: 1230px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.title {
+  margin-bottom: 30px;
+  font-size: 36px;
+  line-height: 42px;
+}
+.page-section {
+  padding: 100px 0px;
+}

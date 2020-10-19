@@ -1,0 +1,114 @@
+@import "libs";
+@import "global";
+@import "vars";
+@import "fonts";
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 0px 0px;
+  z-index: 10;
+  transition: 0.3s;
+  &.sticky {
+    background-color: #fff;
+    padding: 30px 100px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    color: #333;
+  }
+}
+.header {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo {
+    color: #78cad2;
+    @extend %sn-bold;
+    font-size: 33px;
+    text-transform: uppercase;
+  }
+}
+.header-menu {
+  position: relative;
+  &__list-item {
+    display: inline-block;
+  }
+  &__list-item + .header-menu__list-item {
+    padding-left: 15px;
+  }
+  .marker {
+    position: absolute;
+    left: 0;
+    height: 4px;
+    width: 0;
+    background-color: #78cad2;
+    bottom: -8px;
+    transition: 0.5s;
+    border-radius: 4px;
+  }
+}
+
+.main {
+  position: relative;
+  height: 100vh;
+  background-image: url("../images/main-bg-2.jpg"),
+    linear-gradient(230deg, #283048, #859398);
+  background-blend-mode: luminosity;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__info {
+    position: absolute;
+    left: 24%;
+    bottom: 33%;
+    max-width: 500px;
+  }
+  &__info-name {
+    text-align: right;
+    margin-right: 10px;
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 42px;
+    span {
+      color: #78cad2;
+    }
+  }
+  &__info-title {
+    font-size: 72px;
+    line-height: 98px;
+    margin-bottom: 30px;
+  }
+  &__info-link {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    a {
+      width: 220px;
+      font-size: 20px;
+      background-color: transparent;
+      border: 1px solid #fff;
+      border-radius: 25px;
+      padding: 8px;
+      text-align: center;
+      & + a {
+        margin-left: 20px;
+      }
+      &:hover {
+        border: 1px solid #78cad2;
+        color: #78cad2;
+      }
+    }
+  }
+}
+.about {
+  height: 100vh;
+  color: #000;
+  background-color: #fff;
+}
+@import "media";
