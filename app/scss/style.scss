@@ -13,9 +13,15 @@ header {
   transition: 0.3s;
   &.sticky {
     background-color: #fff;
-    padding: 30px 100px;
+    padding: 30px 0px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
     color: #333;
+    .translate {
+      color: #333;
+    }
+    .active {
+      color: #78cad2;
+    }
   }
 }
 .header {
@@ -33,6 +39,10 @@ header {
 }
 .header-menu {
   position: relative;
+  display: flex;
+  &__list {
+    margin-right: 30px;
+  }
   &__list-item {
     display: inline-block;
   }
@@ -48,6 +58,38 @@ header {
     bottom: -8px;
     transition: 0.5s;
     border-radius: 4px;
+  }
+  .translate {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 5px;
+    @extend %tm-bold;
+    padding: 0 8px;
+  }
+  .eng-btn {
+    padding: 0 10px;
+  }
+  .rus-btn {
+    position: relative;
+    &::after {
+      content: "";
+      background-color: #78cad2;
+      width: 2px;
+      height: 18px;
+      position: absolute;
+      top: 5px;
+      right: -2px;
+    }
+  }
+  .active {
+    color: #78cad2;
+    background-color: transparent;
   }
 }
 
@@ -75,7 +117,7 @@ header {
     margin-bottom: 50px;
     font-size: 36px;
     line-height: 42px;
-    span {
+    span.fn {
       color: #78cad2;
     }
   }
@@ -83,18 +125,20 @@ header {
     font-size: 72px;
     line-height: 98px;
     margin-bottom: 30px;
+    text-align: center;
   }
   &__info-link {
     display: flex;
     align-items: center;
     margin: 0 auto;
+
     a {
-      width: 220px;
+      width: 200px;
       font-size: 20px;
       background-color: transparent;
       border: 1px solid #fff;
       border-radius: 25px;
-      padding: 8px;
+      padding: 6px 0px;
       text-align: center;
       & + a {
         margin-left: 20px;
@@ -107,7 +151,6 @@ header {
   }
 }
 .about {
-  height: 100vh;
   color: #000;
   background-color: #fff;
 }

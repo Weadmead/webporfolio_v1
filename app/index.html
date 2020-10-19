@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
+    <title>web-portfolio</title>
     <link
       href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&family=Titillium+Web:wght@400;700&display=swap"
       rel="stylesheet"
@@ -16,49 +16,108 @@
       <div class="container">
         <div class="header__inner">
           <div class="header__logo">
-            <a class="header__logo-link" href="#">Портфолио</a>
+            <a class="header__logo-link lang" key="logo" href="#">Portfolio</a>
           </div>
           <nav class="header-menu">
-            <div class="marker"></div>         
+            <div class="marker"></div>
             <ul class="header-menu__list">
               <li class="header-menu__list-item">
-                <a class="header-menu__list-link" href="#">Главная</a>
+                <a class="header-menu__list-link lang" key="home" href="#main"
+                  >Home</a
+                >
               </li>
               <li class="header-menu__list-item">
-                <a class="header-menu__list-link" href="#">Обо мне</a>
+                <a class="header-menu__list-link lang" key="about" href="#about"
+                  >About Me</a
+                >
               </li>
               <li class="header-menu__list-item">
-                <a class="header-menu__list-link" href="#">Услуги</a>
+                <a
+                  class="header-menu__list-link lang"
+                  key="services"
+                  href="#services"
+                  >Services</a
+                >
               </li>
               <li class="header-menu__list-item">
-                <a class=header-menu__list-link" href="#">Мои работы</a>
+                <a class="header-menu__list-link lang" key="works" href="#works"
+                  >My Works</a
+                >
               </li>
               <li class="header-menu__list-item">
-                <a class="header-menu__list-link" href="#">Отзывы</a>
+                <a
+                  class="header-menu__list-link lang"
+                  key="testemonials"
+                  href="#"
+                  >Testemonials</a
+                >
               </li>
               <li class="header-menu__list-item">
-                <a class="header-menu__list-link" href="#">Контакты</a>
+                <a class="header-menu__list-link lang" key="contacts" href="#"
+                  >Contacts</a
+                >
               </li>
             </ul>
+            <button id="ru" class="translate rus-btn">Ru</button>
+            <button id="en" class="translate active eng-btn">En</button>
           </nav>
         </div>
       </div>
     </header>
 
-    <section class="main">
+    <section class="main" id="main">
       <div class="container">
         <div class="main__info">
-          <h3 class="main__info-name"><span>Родион</span>  Кондаков</h3>
-          <h1 class="main__info-title">Веб-разработчик</h1>
+          <h3 class="main__info-name">
+            <span class="lang fn" key="fn">Rodion</span>
+            <span class="lang ln" key="ln">Kondakov</span>
+          </h3>
+          <h1 class="main__info-title lang" key="maintle">Web - developer</h1>
           <div class="main__info-link">
-            <a class="portfolio-link" href="#">Мои работы</a>
-            <a class="contact-link" href="#">Связаться со мной</a>
+            <a class="portfolio-link lang" key="worksbtn" href="#">My works</a>
+            <a class="contact-link lang" key="contactbtn" href="#"
+              >Contact me</a
+            >
           </div>
         </div>
       </div>
     </section>
 
-    <section class="about page-section">
+    <section class="about page-section" id="about">
+      <div class="container">
+        <h3 class="about__title title">About me</h3>
+        <div class="about__text">
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia,
+            omnis tempora aliquid neque aperiam doloribus, perspiciatis expedita
+            id harum recusandae cupiditate quia voluptate dolorem quod
+            consequuntur nostrum, ipsa a eius?Sint autem dolorem rem officia,
+            non facere, eligendi dolore fugiat vitae harum praesentium omnis,
+            ullam est at. Quos laborum consectetur rem deleniti. Perspiciatis
+            ullam molestias magnam corporis laudantium eius autem.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="services page-section" id="services">
+      <div class="container">
+        <h3 class="about__title title">About me</h3>
+        <div class="about__text">
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia,
+            omnis tempora aliquid neque aperiam doloribus, perspiciatis expedita
+            id harum recusandae cupiditate quia voluptate dolorem quod
+            consequuntur nostrum, ipsa a eius?Sint autem dolorem rem officia,
+            non facere, eligendi dolore fugiat vitae harum praesentium omnis,
+            ullam est at. Quos laborum consectetur rem deleniti. Perspiciatis
+            ullam molestias magnam corporis laudantium eius autem.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="works page-section" id="works">
       <div class="container">
         <h3 class="about__title title">About me</h3>
         <div class="about__text">
@@ -78,5 +137,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/libs.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/translate.js"></script>
   </body>
 </html>

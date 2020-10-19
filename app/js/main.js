@@ -1,10 +1,11 @@
 $(function () {
+    //Липкий хедер
     window.addEventListener('scroll', function () {
         var header = document.querySelector('header');
         header.classList.toggle('sticky', window.scrollY > 0);
     });   
         
-   
+   // Маркер под кнопками меню навигации
     var marker = document.querySelector('.marker');
     var item = document.querySelectorAll('nav a');
 
@@ -16,8 +17,29 @@ $(function () {
     item.forEach(link => {
         link.addEventListener('click', (e) => {
             indicator(e.target);
-        })
+        })      
     })
+// добавляем цвет активной кнопке выбора языка
+$('.translate').on('click', function() {
+  $(this).addClass('active')
+    .siblings().removeClass('active');
+})
     
-    
+   
+
+$("nav").on("click","a", function (event) {
+        // исключаем стандартную реакцию браузера
+        event.preventDefault();
+ 
+        // получем идентификатор блока из атрибута href
+        var id  = $(this).attr('href'),
+ 
+        // находим высоту, на которой расположен блок
+            top = $(id).offset().top;
+         
+        // анимируем переход к блоку, время: 800 мс
+        $('body,html').animate({scrollTop: top}, 800);
+    });
+         
+
 });
