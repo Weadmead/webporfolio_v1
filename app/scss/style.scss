@@ -40,6 +40,8 @@ header {
 .header-menu {
   position: relative;
   display: flex;
+  text-transform: uppercase;
+  @extend %tm-bold;
   &__list {
     margin-right: 30px;
   }
@@ -68,12 +70,12 @@ header {
     font-size: 18px;
     text-transform: uppercase;
     text-align: center;
-    padding-top: 5px;
+    align-items: center;
     @extend %tm-bold;
-    padding: 0 8px;
+    padding-bottom: 4px;
   }
   .eng-btn {
-    padding: 0 10px;
+    margin-left: 3px;
   }
   .rus-btn {
     position: relative;
@@ -83,8 +85,8 @@ header {
       width: 2px;
       height: 18px;
       position: absolute;
-      top: 5px;
-      right: -2px;
+      top: 4px;
+      right: -3px;
     }
   }
   .active {
@@ -94,7 +96,6 @@ header {
 }
 
 .main {
-  position: relative;
   height: 100vh;
   background-image: url("../images/main-bg-2.jpg"),
     linear-gradient(230deg, #283048, #859398);
@@ -105,11 +106,14 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  &__inner {
+    position: relative;
+  }
   &__info {
     position: absolute;
-    left: 24%;
-    bottom: 33%;
-    max-width: 500px;
+    left: 70px;
+    bottom: 0;
+    top: 0;
   }
   &__info-name {
     text-align: right;
@@ -117,6 +121,7 @@ header {
     margin-bottom: 50px;
     font-size: 36px;
     line-height: 42px;
+    @extend %tm-bold;
     span.fn {
       color: #78cad2;
     }
@@ -131,20 +136,20 @@ header {
     display: flex;
     align-items: center;
     margin: 0 auto;
-
     a {
       width: 200px;
-      font-size: 20px;
+      font-size: 18px;
       background-color: transparent;
       border: 1px solid #fff;
       border-radius: 25px;
-      padding: 6px 0px;
+      padding: 6px;
       text-align: center;
+      @extend %tm-bold;
       & + a {
         margin-left: 20px;
       }
       &:hover {
-        border: 1px solid #78cad2;
+        border: 1px solid $mc;
         color: #78cad2;
       }
     }
@@ -153,5 +158,130 @@ header {
 .about {
   color: #000;
   background-color: #fff;
+  @extend %tm-regular;
+  &__text {
+    max-width: 900px;
+    margin: 0 auto 50px;
+  }
+  &__skills-title {
+    margin-bottom: 40px;
+    font-size: 22px;
+    @extend %tm-bold;
+    text-align: center;
+  }
+  &__list {
+    max-width: 300px;
+    border-right: 4px solid $mc;
+    padding-right: 20px;
+  }
+  &__list-item {
+    padding-left: 20px;
+    position: relative;
+    @extend %tm-regular;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: $mc;
+      top: 10px;
+      left: 0;
+    }
+  }
+  &__skills-inner {
+    display: flex;
+    justify-content: space-between;
+    width: 900px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+  &__list-img {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+    span {
+      position: absolute;
+      display: none;
+      font-size: 12px;
+      text-align: center;
+      width: 100%;
+      @extend %tm-bold;
+      bottom: -25px;
+      color: $mc;
+    }
+    img {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 10px;
+    }
+    li {
+      padding-bottom: 30px;
+      height: 80px;
+    }
+    li:hover {
+      transform: scale(1.2);
+      transition: all 0.3s ease-in-out;
+    }
+    li:hover .progress-bar {
+      display: block;
+      transition: all 0.3s;
+    }
+    li:hover span {
+      display: block;
+    }
+    li + li {
+      margin-left: 30px;
+    }
+  }
+  .progress-bar {
+    position: relative;
+    display: flex;
+    padding: 4px 3px 2px;
+    background: transparent;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid $mc;
+    transition: 0.5s;
+    display: none;
+  }
+  .progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-radius: 10px;
+    background: $mc;
+    box-shadow: inser 0 0 2px #000;
+    animation: animate 2s ease-in-out forwards;
+  }
+  @keyframes animate {
+    from {
+      width: 0;
+    }
+  }
+  .about__cv {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    &-link {
+      min-width: 200px;
+      font-size: 18px;
+      background-color: transparent;
+      border: 1px solid #000;
+      border-radius: 25px;
+      padding: 6px;
+      text-align: center;
+      @extend %tm-bold;
+      &:hover {
+        background-color: $mc;
+        color: #fff;
+        border-color: $mc;
+      }
+    }
+  }
 }
 @import "media";
