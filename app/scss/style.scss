@@ -11,16 +11,21 @@ header {
   padding: 30px 0px 0px;
   z-index: 10;
   transition: 0.3s;
+  background-color: inherit;
   &.sticky {
     background-color: #fff;
     padding: 30px 0px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
     color: #333;
+    .header__logo {
+      text-shadow: none;
+      color: $mc;
+    }
     .translate {
       color: #333;
     }
     .active {
-      color: #78cad2;
+      color: $mc;
     }
   }
 }
@@ -31,10 +36,12 @@ header {
     align-items: center;
   }
   &__logo {
-    color: #78cad2;
     @extend %sn-bold;
     font-size: 33px;
     text-transform: uppercase;
+    color: $mc;
+    text-shadow: 0 0 10px #78cad2, 0 0 20px #78cad2, 0 0 40px#78cad2,
+      0 0 80px #78cad2;
   }
 }
 .header-menu {
@@ -56,7 +63,7 @@ header {
     left: 0;
     height: 4px;
     width: 0;
-    background-color: #78cad2;
+    background-color: $mc;
     bottom: -8px;
     transition: 0.5s;
     border-radius: 4px;
@@ -81,7 +88,7 @@ header {
     position: relative;
     &::after {
       content: "";
-      background-color: #78cad2;
+      background-color: $mc;
       width: 2px;
       height: 18px;
       position: absolute;
@@ -90,11 +97,12 @@ header {
     }
   }
   .active {
-    color: #78cad2;
+    color: $mc;
     background-color: transparent;
   }
 }
 
+//START main section
 .main {
   height: 100vh;
   background-image: url("../images/main-bg-2.jpg"),
@@ -122,39 +130,129 @@ header {
     font-size: 36px;
     line-height: 42px;
     @extend %tm-bold;
-    span.fn {
-      color: #78cad2;
-    }
+    text-shadow: 0 0 10px #78cad2, 0 0 20px#78cad2, 0 0 40px #78cad2,
+      0 0 80px #78cad2;
+    -webkit-box-reflect: below -12px linear-gradient(transparent, #0006);
+  }
+  span.fn {
+    color: $mc;
+    text-shadow: 0 0 10px #78cad2, 0 0 20px #78cad2, 0 0 40px#78cad2,
+      0 0 80px #78cad2;
   }
   &__info-title {
     font-size: 72px;
     line-height: 98px;
-    margin-bottom: 30px;
     text-align: center;
+    margin-bottom: 10px;
   }
   &__info-link {
     display: flex;
+    justify-content: center;
     align-items: center;
-    margin: 0 auto;
+    text-align: center;
     a {
+      position: relative;
       width: 200px;
+      display: inline-block;
+      padding: 10px 10px;
+      color: $mc;
       font-size: 18px;
-      background-color: transparent;
-      border: 1px solid #fff;
-      border-radius: 25px;
-      padding: 6px;
-      text-align: center;
+      overflow: hidden;
+      transition: 0.5s;
       @extend %tm-bold;
-      & + a {
-        margin-left: 20px;
+    }
+    a + a {
+      margin-left: 20px;
+    }
+    a:hover {
+      background: $mc;
+      color: #fff;
+      box-shadow: 0 0 5px #78cad2, 0 0 25px #78cad2, 0 0 50px #78cad2,
+        0 0 200px #78cad2;
+    }
+    span.name-l {
+      position: relative;
+    }
+    a span {
+      position: absolute;
+      display: block;
+    }
+    a span:nth-child(1) {
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #78cad2);
+      animation: animate1 1s linear infinite;
+    }
+    @keyframes animate1 {
+      0% {
+        left: -100%;
       }
-      &:hover {
-        border: 1px solid $mc;
-        color: #78cad2;
+      50%,
+      100% {
+        left: 100%;
+      }
+    }
+    a span:nth-child(2) {
+      top: -100%;
+      right: 0;
+      width: 2px;
+      height: 100%;
+      background: linear-gradient(180deg, transparent, #78cad2);
+      animation: animate2 1s linear infinite;
+      animation-delay: 0.25s;
+    }
+    @keyframes animate2 {
+      0% {
+        top: -100%;
+      }
+      50%,
+      100% {
+        top: 100%;
+      }
+    }
+    a span:nth-child(3) {
+      bottom: 0;
+      right: -100%;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(270deg, transparent, #78cad2);
+      animation: animate3 1s linear infinite;
+      animation-delay: 0.5s;
+    }
+    @keyframes animate3 {
+      0% {
+        right: -100%;
+      }
+      50%,
+      100% {
+        right: 100%;
+      }
+    }
+    a span:nth-child(4) {
+      bottom: -100%;
+      left: 0;
+      width: 2px;
+      height: 100%;
+      background: linear-gradient(360deg, transparent, #78cad2);
+      animation: animate4 1s linear infinite;
+      animation-delay: 0.75s;
+    }
+    @keyframes animate4 {
+      0% {
+        bottom: -100%;
+      }
+      50%,
+      100% {
+        bottom: 100%;
       }
     }
   }
 }
+//main section END
+
+// START about section
 .about {
   color: #000;
   background-color: #fff;
@@ -256,9 +354,9 @@ header {
     border-radius: 10px;
     background: $mc;
     box-shadow: inser 0 0 2px #000;
-    animation: animate 2s ease-in-out forwards;
+    animation: animatep 2s ease-in-out forwards;
   }
-  @keyframes animate {
+  @keyframes animatep {
     from {
       width: 0;
     }
@@ -271,7 +369,8 @@ header {
       min-width: 200px;
       font-size: 18px;
       background-color: transparent;
-      border: 1px solid #000;
+      border: 1px solid $mc;
+      color: $mc;
       border-radius: 25px;
       padding: 6px;
       text-align: center;
@@ -280,8 +379,16 @@ header {
         background-color: $mc;
         color: #fff;
         border-color: $mc;
+        transition: 0.5s;
+        box-shadow: 2px 4px 15px 2px #78cad2;
       }
     }
   }
+}
+//about section END
+
+.footer {
+  height: 100vh;
+  background-color: #000;
 }
 @import "media";
