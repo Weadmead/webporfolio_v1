@@ -39,6 +39,24 @@ body {
   line-height: 28px;
   background-color: #000 linear-gradient(230deg, #283048, #859398);
 }
+::-webkit-scrollbar {
+  width: 0px;
+}
+#scrlbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 10px;
+  height: 100%;
+  border-radius: 10px;
+  background: rgb(76, 215, 232);
+  background: linear-gradient(
+    to top,
+    rgb(49, 97, 104) 12%,
+    rgba(120, 202, 210, 1) 86%,
+    rgb(64, 189, 206) 65%
+  );
+}
 .wrapper-global {
   display: flex;
   flex-direction: column;

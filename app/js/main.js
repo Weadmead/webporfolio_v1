@@ -39,7 +39,16 @@ $("nav").on("click","a", function (event) {
          
         // анимируем переход к блоку, время: 800 мс
         $('body,html').animate({scrollTop: top}, 800);
-    });
+});
+    
+    //custom scrollbar
+    $(window).scroll(function () {
+        var scroll = $(window).scrollTop(),
+            dh = $(document).height(),
+            wh = $(window).height();
+        scrollPercent = (scroll / (dh - wh)) * 100;
+        $('#scrlbar').css('height', scrollPercent + "%")
+    })
          
 
 });
