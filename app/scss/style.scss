@@ -126,7 +126,7 @@ header {
   &__info-name {
     text-align: right;
     margin-right: 10px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     font-size: 36px;
     line-height: 42px;
     @extend %tm-bold;
@@ -141,9 +141,40 @@ header {
   }
   &__info-title {
     font-size: 72px;
-    line-height: 98px;
+    line-height: 82px;
     text-align: center;
     margin-bottom: 10px;
+  }
+  &__sprite-list {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 12px;
+    a {
+      display: inline-block;
+      width: 42px;
+      height: 42px;
+      background: url(../images/icons/css_sprites2.png);
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      background-size: cover;
+      cursor: pointer;
+      &:hover {
+        transition: all 0.5s;
+        transform: translateY(-10px);
+      }
+    }
+    li + li {
+      margin-left: 3px;
+    }
+    .sprite-ink {
+      background-position: -40px 0;
+    }
+    .sprite-tw {
+      background-position: -82px 0;
+    }
+    .sprite-tg {
+      background-position: -125px 0;
+    }
   }
   &__info-link {
     display: flex;
