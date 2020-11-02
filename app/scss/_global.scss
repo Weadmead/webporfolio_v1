@@ -32,7 +32,7 @@ body {
   min-width: 320px;
   overflow-x: hidden;
   position: relative;
-  color: #fff;
+  color: #333;
   font-family: "PT Sans Narrow", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -80,6 +80,7 @@ body {
   line-height: 42px;
   @extend %tm-bold;
   text-align: center;
+  color: #000;
   span {
     position: relative;
   }

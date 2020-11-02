@@ -12,6 +12,7 @@ header {
   z-index: 10;
   transition: 0.3s;
   background-color: inherit;
+  color: #fff;
   &.sticky {
     background-color: #fff;
     padding: 30px 0px;
@@ -114,14 +115,11 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: #fff;
   &__inner {
-    position: relative;
-  }
-  &__info {
-    position: absolute;
-    left: 70px;
-    bottom: 0;
-    top: 0;
+    max-width: 900px;
+    display: flex;
+    padding: 225px 100px 100px 100px;
   }
   &__info-name {
     text-align: right;
@@ -281,12 +279,9 @@ header {
     }
   }
 }
-//main section END
 
 // START about section
 .about {
-  color: #000;
-  background-color: #fff;
   @extend %tm-regular;
   &__text {
     max-width: 900px;
@@ -294,7 +289,7 @@ header {
   }
   &__skills-title {
     margin-bottom: 40px;
-    font-size: 22px;
+    font-size: 28px;
     @extend %tm-bold;
     text-align: center;
   }
@@ -410,13 +405,62 @@ header {
         background-color: $mc;
         color: #fff;
         border-color: $mc;
-        transition: 0.5s;
+        transition: 0.3s;
         box-shadow: 2px 4px 15px 2px #78cad2;
       }
     }
   }
 }
-//about section END
+//* services section
+.services {
+  background: linear-gradient(280deg, #283048, #5d818f);
+  color: #fff;
+  text-align: center;
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    justify-items: center;
+  }
+  &__title {
+    color: #fff;
+    margin-bottom: 100px;
+  }
+  &__item {
+    max-width: 280px;
+    padding: 150px 10px 0 10px;
+  }
+  &__name {
+    text-align: center;
+    font-size: 28px;
+    position: relative;
+    @extend %tm-bold;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 128px;
+      height: 128px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      top: -145px;
+      left: 65px;
+    }
+  }
+  &__dev::before {
+    background-image: url(../images/content/webdev.svg);
+  }
+  &__tools::before {
+    background-image: url(../images/content/tools.svg);
+  }
+  &__cms::before {
+    background-image: url(../images/content/cms.svg);
+  }
+  &__host::before {
+    background-image: url(../images/content/host.svg);
+  }
+}
+
+//start footer
 
 .footer {
   height: 100vh;
