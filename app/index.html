@@ -70,7 +70,7 @@
                     <a
                       class="header-menu__list-link lang"
                       key="contacts"
-                      href="#"
+                      href="#contacts"
                       >Contacts</a
                     >
                   </li>
@@ -389,6 +389,9 @@
 
         <section class="testemonials page-section" id="testemonials">
           <div class="container">
+            <div class="testemonials__title title">
+              <span>Testemonials</span>
+            </div>
             <div class="testemonials__slider">
               <div class="testemonials__box">
                 <img
@@ -462,7 +465,47 @@
         <!-- content end  -->
       </div>
 
-      <footer class="footer"></footer>
+      <footer class="footer" id="contacts">
+        <div class="container">
+          <div class="footer__title title"><span>Contact me</span></div>
+          <div class="footer__inner">
+            <div class="footer__contacts">
+              <ul class="footer__list">
+                <li class="footer__link">                   
+                  <a class="icon-envelope-o" href="mailto:wead758@gmail.com"><span>wead758@gmail.com</span></a>
+                </li>
+                <li class="footer__link">
+                  <a class="icon-phone" href="tel:+380972686234"><span>+380972686234</span></a>
+                </li>
+              </ul>
+              <ul class="main__sprite-list footer__sprite">           
+                </li>
+                <li class="sprite-list__item">
+                  <a class="sprite-tw" href="#"></a>
+                </li>
+                <li class="sprite-list__item">
+                  <a class="sprite-tg" href="https://t.me/Weadmead"></a>
+                </li>
+              </ul>
+            </div>
+            <form class="footer__form">              
+              <!-- hidden fields -->
+              <input type="hidden" name="project_name" value="Web-portfolio">
+              <input type="hidden" name="admin_email" value="wead758@gmail.com">
+              <input type="hidden" name="form_subject" value="footer-form">
+              <!-- end hidden fields -->
+
+              <input type="text" id="name" name="name" placeholder="Your name..." required />                
+              <input type="email" id="mail" name="e-mail" placeholder="Your E-mail..." required />                 
+              <textarea value="Message" id="msg" name="message" placeholder="Your message...."></textarea>
+              <input class="form__btn" type="submit" value="SEND">              
+            </form>
+          </div>
+        </div>
+        <div class="footer__copy">
+          Icons made by  <a href="https://www.flaticon.com/authors/freepik" title="Freepik"> Freepik  </a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+        </div>
+      </footer>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
