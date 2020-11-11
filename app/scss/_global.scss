@@ -97,3 +97,33 @@ body {
 .page-section {
   padding: 100px 0px;
 }
+.slick-track {
+  margin-bottom: 20px;
+}
+.slick-dots {
+  display: flex;
+  justify-content: center;
+  li {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #78cad2;
+    border-radius: 50%;
+    &::before {
+      position: absolute;
+      content: "";
+
+      background-color: inherit;
+      bottom: 0;
+    }
+    & + li {
+      margin-left: 10px;
+    }
+    &.slick-active {
+      border: 1px solid #78cad2;
+      background-color: #78cad2;
+    }
+  }
+  button {
+    visibility: hidden;
+  }
+}

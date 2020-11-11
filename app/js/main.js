@@ -2,7 +2,7 @@ $(function () {
     //Липкий хедер
     window.addEventListener('scroll', function () {
         var header = document.querySelector('header');
-        header.classList.toggle('sticky', window.scrollY > 100);
+        header.classList.toggle('sticky', window.scrollY > 400);
     });   
         
    // Маркер под кнопками меню навигации
@@ -20,13 +20,12 @@ $(function () {
         })      
     })
 // добавляем цвет активной кнопке выбора языка
-$('.translate').on('click', function() {
-  $(this).addClass('active')
-    .siblings().removeClass('active');
+    $('.translate').on('click', function() {
+    $(this).addClass('active')
+        .siblings().removeClass('active');
 })
-    
-   
 
+      
 $("nav").on("click","a", function (event) {
         // исключаем стандартную реакцию браузера
         event.preventDefault();
@@ -49,6 +48,31 @@ $("nav").on("click","a", function (event) {
         scrollPercent = (scroll / (dh - wh)) * 100;
         $('#scrlbar').css('height', scrollPercent + "%")
     })
+    // gallery
+    const addListeners = div => {
+    div.addEventListener('mouseenter', () => {
+        div.classList.add('hover')
+    })
+    div.addEventListener('mouseleave', () => {
+        div.classList.remove('hover')
+    })
+}
+
+    const container = document.querySelector('.grid-container')
+    addListeners(container)
+
+    const allGalleryContainer = document.querySelectorAll('.works__gallery')
+    allGalleryContainer.forEach(galleryContainer => {
+    addListeners(galleryContainer)
+    })
+    
+  $('.testemonials__slider').slick({    
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    dots: true,
+    arrows: false
+  });
          
 
 });
