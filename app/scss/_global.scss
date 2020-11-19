@@ -9,6 +9,17 @@ html {
 *::after {
   box-sizing: inherit;
 }
+body {
+  min-width: 320px;
+  overflow-x: hidden;
+  position: relative;
+  color: #333;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  background-color: #000 linear-gradient(230deg, #283048, #859398);
+}
 a {
   text-decoration: none;
   color: inherit;
@@ -29,16 +40,8 @@ h6 {
   margin: 0;
   font-size: inherit;
 }
-body {
-  min-width: 320px;
-  overflow-x: hidden;
-  position: relative;
-  color: #333;
-  font-family: "PT Sans Narrow", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 28px;
-  background-color: #000 linear-gradient(230deg, #283048, #859398);
+button {
+  padding: 0;
 }
 ::-webkit-scrollbar {
   width: 0px;
