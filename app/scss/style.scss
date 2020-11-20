@@ -15,8 +15,8 @@ header {
   color: #fff;
   &.sticky {
     padding: 30px 0px;
-    background: linear-gradient(230deg, #283048, #5d818f);
-    // background: rgba(#1c1c1c, 0.7);
+    // background: linear-gradient(230deg, #283048, #5d818f);
+    background: rgba(#1c1c1c, 0.9);
     opacity: 0.9;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
     color: #fff;
@@ -331,17 +331,17 @@ header {
   &__skills-inner {
     display: flex;
     justify-content: space-between;
-    width: 900px;
+
     margin: 0 auto;
     margin-bottom: 50px;
   }
-  &__list-img {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    max-width: 700px;
-    margin: 0 auto;
-    position: relative;
+  &__img {
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    row-gap: 40px;
     span {
       position: absolute;
       display: none;
@@ -349,31 +349,28 @@ header {
       text-align: center;
       width: 100%;
       @extend %tm-bold;
-      bottom: -25px;
+      bottom: -8px;
       color: $mc;
     }
     img {
-      width: 80px;
+      align-self: center;
+      width: 70px;
       height: 80px;
-      margin-bottom: 10px;
+      padding-bottom: 10px;
     }
-    li {
-      padding-bottom: 30px;
+    .about__img-item {
       height: 80px;
       transition: all 0.3s ease-in-out;
     }
-    li:hover {
+    .about__img-item:hover {
       transform: scale(1.2);
     }
-    li:hover .progress-bar {
+    .about__img-item:hover .progress-bar {
       display: block;
       transition: all 0.3s;
     }
-    li:hover span {
+    .about__img-item:hover span {
       display: block;
-    }
-    li + li {
-      margin-left: 30px;
     }
   }
   .progress-bar {
@@ -436,6 +433,7 @@ header {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 20px;
+    row-gap: 60px;
     justify-items: center;
   }
   &__title {
@@ -581,6 +579,10 @@ header {
     font-size: 18px;
     @extend %tm-bold;
   }
+  .slick-slide {
+    display: flex;
+    justify-content: center;
+  }
 }
 //start footer
 
@@ -623,8 +625,8 @@ header {
     .icon-envelope-o::before,
     .icon-phone::before {
       position: absolute;
-      top: 5px;
-      left: 6px;
+      top: 3px;
+      left: 8px;
     }
     &:not(:last-child) {
       margin-right: 30px;

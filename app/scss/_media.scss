@@ -1,3 +1,8 @@
+@media (max-width: 1140px) {
+  .services__inner {
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  }
+}
 @media (max-width: 940px) {
   #scrlbar {
     width: 2px;
@@ -83,18 +88,35 @@
   .translate-box {
     margin: 0;
   }
-
+  .about__img {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
   .grid-container {
     grid-template-columns: 1fr;
     .works__gallery {
-      &:nth-child(1),
-      &:nth-child(2),
-      &:nth-child(3),
-      &:nth-child(4),
-      &:nth-child(6),
-      &:nth-child(7) {
+      &:nth-child(1) {
+        grid-column: span 2;
+        grid-row: span 1;
+      }
+      &:nth-child(2) {
+        grid-column: span 1;
+        grid-row: span 2;
+      }
+      &:nth-child(4) {
         grid-column: span 1;
         grid-row: span 1;
+      }
+      &:nth-child(5) {
+        grid-column: span 1;
+        grid-row: span 2;
+      }
+      &:nth-child(6) {
+        grid-column: span 1;
+        grid-row: span 2;
+      }
+      &:nth-child(7) {
+        grid-column: span 3;
+        grid-row: span 2;
       }
     }
   }
@@ -145,8 +167,23 @@
       font-size: 14px;
     }
   }
+  .grid-container {
+    grid-template-columns: 1fr;
+    .works__gallery {
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(4),
+      &:nth-child(5),
+      &:nth-child(6),
+      &:nth-child(7) {
+        grid-column: span 1;
+        grid-row: span 1;
+      }
+    }
+  }
 }
-@media (max-width: 588px) {
+@media (max-width: 598px) {
   .main__inner {
     padding-left: 90px;
   }
@@ -161,6 +198,38 @@
   .main__info-link a {
     width: 140px;
     font-size: 12px;
+  }
+  .about__img {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  }
+  .services__inner {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+}
+@media (max-width: 520px) {
+  .about__skills-inner {
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .about__list {
+    border: none;
+    margin-bottom: 40px;
+    padding-right: 0;
+  }
+  .title {
+    font-size: 32px;
+  }
+  .works__btn {
+    font-size: 16px;
+  }
+  .services__name {
+    font-size: 22px;
+  }
+  .about__cv-link.lang {
+    font-size: 16px;
+  }
+  .footer__icon {
+    font-size: 16px;
   }
 }
 @media (max-width: 432px) {
@@ -178,6 +247,9 @@
   .main__info-link a {
     width: 140px;
     font-size: 12px;
+  }
+  .icon-phone {
+    margin-right: 70px;
   }
 }
 @media (max-width: 354px) {

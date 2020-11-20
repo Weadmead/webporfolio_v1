@@ -85,7 +85,25 @@ $(function () {
         slidesToShow: 3,
         slidesToScroll: 1,
         dots: true,
-        arrows: false
+        arrows: false,
+        responsive: [
+            {
+            breakpoint: 1140,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,                
+                dots: true
+            }
+          },
+            {
+                breakpoint: 790,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    dots: true
+                }
+            },
+  ]
     });
   
     // form
