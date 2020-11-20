@@ -5,7 +5,10 @@
   .marker {
     display: none;
   }
-  .header__menu {
+  .header__logo {
+    margin-left: 50px;
+  }
+  .header-menu {
     order: -1;
   }
   .header-menu__list {
@@ -40,7 +43,7 @@
     cursor: pointer;
     outline: none;
     position: absolute;
-    left: -50px;
+    bottom: 0px;
   }
   .header-menu__btn::before,
   .header-menu__btn::after {
@@ -94,5 +97,99 @@
         grid-row: span 1;
       }
     }
+  }
+}
+@media (max-width: 688px) {
+  .header__logo-link {
+    font-size: 28px;
+  }
+  .header-menu__btn {
+    bottom: -6px;
+  }
+  .translate-box .translate {
+    font-size: 16px;
+  }
+  .translate-box .rus-btn::after {
+    height: 16px;
+  }
+  .main__inner {
+    padding-left: 70px;
+  }
+  .main__info-name {
+    font-size: 32px;
+    margin-bottom: 15px;
+  }
+  .main__sprite-list {
+    a {
+      width: 32px;
+      height: 32px;
+    }
+    .sprite-ink {
+      background-position: -33px 0;
+    }
+    .sprite-tw {
+      background-position: -66px 0;
+    }
+    .sprite-tg {
+      background-position: -97px 0;
+    }
+  }
+  .main__info-title {
+    font-size: 58px;
+    line-height: 64px;
+  }
+  .main__info-link {
+    padding-bottom: 20px;
+    a {
+      width: 160px;
+      font-size: 14px;
+    }
+  }
+}
+@media (max-width: 588px) {
+  .main__inner {
+    padding-left: 90px;
+  }
+  .main__info-name {
+    font-size: 28px;
+    line-height: 32px;
+  }
+  .main__info-title {
+    font-size: 42px;
+    line-height: 42px;
+  }
+  .main__info-link a {
+    width: 140px;
+    font-size: 12px;
+  }
+}
+@media (max-width: 432px) {
+  .main__inner {
+    padding-left: 25px;
+  }
+  .main__info-name {
+    font-size: 26px;
+    line-height: 28px;
+  }
+  .main__info-title {
+    font-size: 46px;
+    line-height: 48px;
+  }
+  .main__info-link a {
+    width: 140px;
+    font-size: 12px;
+  }
+}
+@media (max-width: 354px) {
+  .main__info-link a {
+    width: 120px;
+    font-size: 10px;
+  }
+  .main__info-title {
+    font-size: 38px;
+    line-height: 42px;
+  }
+  .main__inner {
+    padding-left: 10px;
   }
 }

@@ -55,7 +55,7 @@ var arrLang = {
             'fn': 'Rodion',
             'ln': 'Kondakov',
             'maintle': 'Web - developer',
-            'worksbtn': 'My works',
+            'cvbtn': 'Donwload CV',
             'contactbtn': 'Contact Me',
             
         },
@@ -70,7 +70,7 @@ var arrLang = {
             'fn': 'Родион',
             'ln': 'Кондаков',
             'maintle': 'Веб-разработчик',
-             'worksbtn': 'Мои работы',
+             'cvbtn': 'Скачать резюме',
             'contactbtn': 'Связаться со мной',
             
         }
